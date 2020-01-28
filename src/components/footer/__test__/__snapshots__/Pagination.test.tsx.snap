@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination renders correctly 1`] = `
+<div
+  className="sc-AykKC eTDbyt"
+>
+  <a
+    className="sc-AykKD QbgV"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <svg>
+      first-page.svg
+    </svg>
+  </a>
+  <a
+    className="sc-AykKD QbgV"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <svg>
+      chevron-left.svg
+    </svg>
+  </a>
+  <a
+    className="sc-AykKD QbgV"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <svg>
+      chevron-right.svg
+    </svg>
+  </a>
+  <a
+    className="sc-AykKD QbgV"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <svg>
+      last-page.svg
+    </svg>
+  </a>
+</div>
+`;

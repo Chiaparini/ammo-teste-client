@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Limiter renders correctly 1`] = `
+<div
+  className="sc-AykKC lPfmr"
+>
+  <select
+    className="sc-AykKD gEetGY"
+    id="limiter"
+    name="limiter"
+    onChange={[Function]}
+  >
+    <option
+      defaultChecked={true}
+      value="8"
+    >
+      8 produtos por página
+    </option>
+    <option
+      value="16"
+    >
+      16 produtos por página
+    </option>
+    <option
+      value="32"
+    >
+      32 produtos por página
+    </option>
+    <option
+      value="64"
+    >
+      64 produtos por página
+    </option>
+  </select>
+</div>
+`;
