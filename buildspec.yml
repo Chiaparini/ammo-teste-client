@@ -11,8 +11,6 @@ phases:
       - npm i
   build:
     commands:
-      - echo Running tests...
-      - npm run test
       - echo Building...
       - npm run build
 artifacts:
