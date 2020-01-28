@@ -147,19 +147,19 @@ export const Pagination = () => {
 
   return (
     <PaginationWrapper>
-      <Button disabled={(state.page === 1)} onClick={() => goToFirstPage()}>
+      <Button disabled={(state.page === 1)} onClick={goToFirstPage}>
         <FirstPage />
       </Button>
-      <Button disabled={(state.page === 1)} onClick={() => goToPreviousPage()}>
+      <Button disabled={(state.page === 1)} onClick={goToPreviousPage}>
         <PreviousPage />
       </Button>
       {[...Array(state.pages)].map((v, index) =>
         shouldRenderPageButton(index + 1)
       )}
-      <Button disabled={(state.page === state.pages)} onClick={() => goToNextPage()}>
+      <Button disabled={(state.page === state.pages)} onClick={goToNextPage}>
         <NextPage />
       </Button>
-      <Button disabled={(state.page === state.pages)} onClick={() => goToLastPage()}>
+      <Button disabled={(state.page === state.pages)} onClick={goToLastPage}>
         <LastPage />
       </Button>
     </PaginationWrapper>

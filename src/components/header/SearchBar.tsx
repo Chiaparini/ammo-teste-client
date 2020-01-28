@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, FormEvent } from 'react'
 import { CatalogContext } from '../../contexts/store';
 import styled from 'styled-components';
 import { colors } from '../../assets/style/global';
@@ -68,18 +68,20 @@ export const SearchBar = () => {
     action.setQuery("");
   }
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    action.setSensitiveParams(1, state.limit);
+    action.getProducts();
+  }
+
   return (
     <StyledSearch>
       <img src={search} alt="search icon"/>
-      <form action="" onSubmit={e => {
-        e.preventDefault();
-        action.setSensitiveParams(1, state.limit);
-        action.getProducts();
-      }}>
+      <form action="" onSubmit={handleSubmit}>
         <input placeholder="Buscar um produto" type="text" value={state.query} name="" id="" onChange={e => setQuery(e.target.value)}/>
       </form>
       {!!state.query &&
-      <ResetSearch onClick={() => resetSearch()}>
+      <ResetSearch onClick={resetSearch}>
         <img src={cancel} alt="cancel icon" />
       </ResetSearch> }
     </StyledSearch>

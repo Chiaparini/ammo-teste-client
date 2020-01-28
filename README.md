@@ -11,3 +11,5 @@ Primeiro instalar as dependências: `npm i`
 Após o termino das instalações, para rodar o projeto em ambiente de desenvolvimento: `npm start`
 Para rodar os testes: `npm test`
 E para buildar: `npm build`
+
+Para subir as mudanças, existe um pipeline na AWS que verifica as alterações na branch `master`, assim que algum commit for feito nesta branch, o pipeline ira executar o build. 

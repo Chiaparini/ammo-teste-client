@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, ChangeEvent } from 'react'
 import { CatalogContext } from '../../contexts/store';
 import styled from 'styled-components';
 import chevronDown from '../../assets/images/chevron-down.svg'
@@ -33,10 +33,14 @@ export const Limiter = () => {
   const setLimit = (value: string) => {
     action.setSensitiveParams(1, value);
   }
+
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setLimit(e.target.value);
+  }
   
   return (
     <Wrapper>
-      <Select name="limiter" id="limiter" onChange={e => setLimit(e.target.value)}>
+      <Select name="limiter" id="limiter" onChange={handleChange}>
         <option defaultChecked value="8">8 produtos por página</option>
         <option value="16">16 produtos por página</option>
         <option value="32">32 produtos por página</option>
