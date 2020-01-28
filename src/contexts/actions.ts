@@ -1,7 +1,8 @@
 import { 
   QueryPayload,
   ProductsPayload, 
-  LimitPagePayload } from '../models/payloads';
+  LimitPagePayload 
+} from '../models/payloads';
 
 interface FetchProductsInit {
   type: 'FETCH_PRODUCTS_INIT'
@@ -36,4 +37,10 @@ interface ResetParams {
 };
 
 
-export type Actions = FetchProductsInit | FetchProductsSuccess | FetchProductsFail | SetQuery | SetPageOrLimit | SetTitle | ResetParams;
+export type Actions = FetchProductsInit 
+  | FetchProductsSuccess 
+  | FetchProductsFail 
+  | SetQuery 
+  | SetPageOrLimit 
+  | SetTitle 
+  | ResetParams;

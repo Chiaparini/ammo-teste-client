@@ -55,7 +55,7 @@ export const ProductList = () => {
     <StyledList>
       <Total>{state.total} produto{(state.total === 1 ? '' : 's')} encontrado{(state.total === 1 ? '' : 's')}</Total>
 
-      {state.loading && 
+      {(state.loading && !products.length) && 
         <ul>
           <StyledProduct>
             <LoadingCard />

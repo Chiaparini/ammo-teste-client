@@ -20,17 +20,35 @@ const initialState: Catalog = {
 const catalogReducer = (state: Catalog, action: Actions): any => {
   switch (action.type) {
     case 'FETCH_PRODUCTS_INIT':
-      return { ...state, loading: true };
+      return { ...state, 
+        loading: true 
+      };
     case 'FETCH_PRODUCTS_SUCCESS':
-      return { ...state, products: action.payload.products, pages: action.payload.pages, total: action.payload.total, loading: false, error: false };
+      return { ...state, 
+        products: action.payload.products, 
+        pages: action.payload.pages, 
+        total: action.payload.total, 
+        loading: false, 
+        error: false 
+      };
     case 'FETCH_PRODUCTS_FAIL':
-      return { ...state, error: true, loading: false };
+      return { ...state, 
+        error: true, 
+        loading: false 
+      };
     case 'SET_QUERY':
-      return { ...state, query: action.payload.query };
+      return { ...state, 
+        query: action.payload.query 
+      };
     case 'SET_PAGE_OR_LIMIT':
-      return { ...state, limit: action.payload.limit, page: action.payload.page };
+      return { ...state, 
+        limit: action.payload.limit, 
+        page: action.payload.page 
+      };
     case 'SET_TITLE':
-      return { ...state, title: action.payload }
+      return { ...state, 
+        title: action.payload 
+      }
     case 'RESET_PARAMS':
       return { ...initialState };
     default:
@@ -44,9 +62,12 @@ export const useCatalog = () => {
 
   // get params when page renders 
   useEffect(() => {
-    state.page = Number(currentUrlParams.get('page')) || initialState.page;
-    state.query = Number(currentUrlParams.get('search')) || initialState.query;
-    state.limit = Number(currentUrlParams.get('limit')) || initialState.limit;
+    state.page = Number(currentUrlParams.get('page')) 
+      || initialState.page;
+    state.query = Number(currentUrlParams.get('search')) 
+      || initialState.query;
+    state.limit = Number(currentUrlParams.get('limit')) 
+      || initialState.limit;
   }, []);
   
   useEffect(() => {
@@ -64,7 +85,10 @@ export const useCatalog = () => {
       currentUrlParams.set('page', state.page);
 
       // update URL params
-      window.history.pushState({page: state.page, search: state.search, limit: state.limit}, '', '?'+currentUrlParams.toString());
+      window.history.pushState({ page: state.page, 
+        search: state.search, 
+        limit: state.limit 
+        }, '', `?${currentUrlParams.toString()}`);
 
       const products = await fetchProducts(state.limit, state.query, state.page);
 

@@ -5,7 +5,7 @@ import { StoreProvider } from './contexts/store';
 
 const Index = () => (
   <StoreProvider>
-    <Home></Home>
+    <Home />
   </StoreProvider>
 )
 
