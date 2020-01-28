@@ -1,7 +1,7 @@
 import React from 'react'
-import { Image } from '../../models/product'; 
+import { Image } from '../../../../models/product'; 
 import styled from 'styled-components';
-import { sizes } from '../../assets/style/global';
+import { sizes } from '../../../../assets/style/global';
 
 const StyledImage = styled.li`
   display: inline-block;

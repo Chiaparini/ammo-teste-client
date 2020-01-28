@@ -1,7 +1,7 @@
 import React from 'react'
-import { Product } from '../../models/product'
+import { Product } from '../../../../models/product'
 import styled from 'styled-components';
-import { colors } from '../../assets/style/global';
+import { colors } from '../../../../assets/style/global';
 
 const StrikePrice = styled.span`
   color: ${colors.darkGrey};

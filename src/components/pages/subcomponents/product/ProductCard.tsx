@@ -1,10 +1,10 @@
 import React from 'react'
-import { Product } from '../../models/product';
+import { Product } from '../../../../models/product';
 import { ProductImages } from './ProductImages';
 import { ProductDescription } from './ProductDescription';
 import { ProductPrice } from './ProductPrice';
 
-import { sizes } from '../../assets/style/global';
+import { sizes } from '../../../../assets/style/global';
 
 import styled from 'styled-components';
 

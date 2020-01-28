@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { CatalogContext } from '../../contexts/store';
-import { ProductCard } from './ProductCard';
+import { CatalogContext } from '../../../contexts/store';
+import { ProductCard } from '../subcomponents/product/ProductCard';
 import styled from 'styled-components';
-import { colors } from '../../assets/style/global';
-import { LoadingCard } from './LoadingCard';
-import { NotFound } from './NotFound';
+import { colors } from '../../../assets/style/global';
+import { LoadingCard } from '../subcomponents/product/LoadingCard';
+import { NotFound } from '../subcomponents/product/NotFound';
 
 
 const StyledProduct = styled.li`

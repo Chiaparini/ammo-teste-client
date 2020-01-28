@@ -1,33 +1,38 @@
+import { 
+  QueryPayload,
+  ProductsPayload, 
+  LimitPagePayload } from '../models/payloads';
+
 interface FetchProductsInit {
-    type: 'FETCH_PRODUCTS_INIT'
+  type: 'FETCH_PRODUCTS_INIT'
 };
 
 interface FetchProductsSuccess {
-    payload: any,
-    type: 'FETCH_PRODUCTS_SUCCESS'
+  payload: ProductsPayload,
+  type: 'FETCH_PRODUCTS_SUCCESS'
 };
 
 interface FetchProductsFail {
-    type: 'FETCH_PRODUCTS_FAIL'
+  type: 'FETCH_PRODUCTS_FAIL'
 };
 
 interface SetQuery {
-    payload: any,
-    type: 'SET_QUERY'
+  payload: QueryPayload,
+  type: 'SET_QUERY'
 };
 
 interface SetPageOrLimit {
-    payload: any,
-    type: 'SET_PAGE_OR_LIMIT'
+  payload: LimitPagePayload,
+  type: 'SET_PAGE_OR_LIMIT'
 };
 
 interface SetTitle {
-    payload: string,
-    type: 'SET_TITLE'
+  payload: string,
+  type: 'SET_TITLE'
 };
 
 interface ResetParams {
-    type: 'RESET_PARAMS'
+  type: 'RESET_PARAMS'
 };
 
 

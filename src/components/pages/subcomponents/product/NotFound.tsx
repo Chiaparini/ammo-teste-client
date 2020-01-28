@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import { colors } from '../../assets/style/global';
-import notfound from '../../assets/images/not-found.png';
+import { colors } from '../../../../assets/style/global';
+import notfound from '../../../../assets/images/not-found.png';
 
 const Title = styled.h2`
   font-size: 32px;

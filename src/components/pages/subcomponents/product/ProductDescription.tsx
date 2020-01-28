@@ -1,7 +1,7 @@
 import React from 'react'
-import { Product } from '../../models/product'
+import { Product } from '../../../../models/product'
 import styled from 'styled-components'
-import { colors, sizes } from '../../assets/style/global'
+import { colors, sizes } from '../../../../assets/style/global'
 
 const Name = styled.h3`
   font-size: 12px;
